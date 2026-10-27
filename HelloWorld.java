@@ -5,6 +5,6 @@ public class HelloWorld {
         String name;
         Scanner scanner = new Scanner(System.in);
         name = scanner.next();
-        System.out.println("Hello " + name + "!!");
+        System.out.println("Hello " + name + "!");
     }
 }
