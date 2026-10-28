@@ -1,8 +1,19 @@
+import java.util.Random;
+
 public class Car {
     private static int nextCarID;
     private int id;
     private double maxSpeed;
     private String name;
+
+    public static enum Colors {
+        GREEN,
+        BLUE,
+        BLACK,
+        WHITE
+    }
+
+    private Colors color;
 
     static {
         nextCarID = 0;
@@ -10,6 +21,25 @@ public class Car {
 
     {
         id = nextCarID++;
+        Random random = new Random();
+        int c = random.nextInt(5);
+        switch (c) {
+            case 0:
+                color = Colors.GREEN;
+                break;
+            case 1:
+                color = Colors.BLUE;
+                break;
+            case 2:
+                color = Colors.BLACK;
+                break;
+            case 3:
+                color = Colors. WHITE;
+                break;
+            default:
+                color = null;
+                break;
+        }
     }
 
     public Car() {
@@ -46,7 +76,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return id + " " + name + " " + maxSpeed + "km/h!";
+        return id + " " + name + " " + color + " " + maxSpeed + " km/h ";
     }
 
     public static void main(String[] args) {
