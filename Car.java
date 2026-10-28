@@ -84,8 +84,9 @@ public class Car {
         car[0] = new Car();
         car[1] = new Car("mitsos", 314);
         car[2] = new Car("babis", 512.2);
+        car[3] = new Car("lol", 314.15);
 
-        for(int i = 0; i < 3; i++) {
+        for(int i = 0; i < 4; i++) {
             System.out.println(car[i].toString());
         }
     } 
