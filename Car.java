@@ -46,7 +46,11 @@ public class Car {
 
     @Override
     public String toString() {
+<<<<<<< HEAD
         return id + " " + name + " " + maxSpeed + "km/h!";
+=======
+        return id + " " + name + " " + maxSpeed + " km/h";
+>>>>>>> origin/main
     }
 
     public static void main(String[] args) {
